@@ -1,11 +1,15 @@
 <template name="references">
 	<form class="frm-references" method="POST">
 		<input type="text" name="name" placeholder="Reference name" />
-		<!--input type="submit" value="Submit" /-->
-		<div id="save-ref" type="submit" class="btn bg-red">
-			<div class="icon"><i class="mdi mdi-content-save"></i></div>
-			<div class="text">Save</div>
-		</div>
+        <textarea name="description" placeholder="Reference name"></textarea>
+        <select class="ui dropdown">
+            <option value="">Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        
+        
+        {{{btnDflt 'save-ref' 'btn bg-red' 'content-save' 'Save'}}}
 	</form>
 	<br /><br />Refs:
 	<table>

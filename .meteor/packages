@@ -22,3 +22,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 momentjs:moment
 iron:router
 dapearce:material-icons
+semantic:ui
+flemay:less-autoprefixer
