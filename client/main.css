@@ -1,0 +1,48 @@
+/* CSS declarations go here */
+body{
+	font: 12px Roboto, Tahoma, Verdana, Arial;
+}
+.btn{
+	display: table;
+	height: 36px;
+	cursor: pointer;
+	padding: 0px 14px;	
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: #FFF;
+    margin: 2px 0px;
+}
+.btn .icon, .btn .text{
+	display: table-cell;
+	vertical-align: middle;
+}
+.btn .icon{
+	font-size: 24px;
+}
+.btn .text{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0px 6px;
+}
+.ibtn-24{
+	font-size: 24px;
+	cursor: pointer;
+}
+.ibtn-36{
+	font-size: 36px;
+	cursor: pointer;
+}
+.red{
+	color: #F44336;	
+}
+.bg-red{
+	background-color: #F44336;	
+}
+input[type=text], input[type=password]{
+    border: 0px;
+    border-bottom: 2px #333 solid;
+    outline: none;
+    margin: 2px 0px;
+    padding: 6px;
+}
