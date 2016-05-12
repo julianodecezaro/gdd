@@ -59,3 +59,38 @@ input[type=password] {
     margin: 2px 0px;
     padding: 6px;
 }
+
+#header-container {
+    background-color: dodgerblue;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    color: #FFF;
+}
+
+#menu-container {
+    background-color: blanchedalmond;
+}
+
+#content-container {
+    background-color: azure;
+}
+
+.frm-references > div.ui {
+    margin: 6px 0px;
+}
+
+.ui.list .item .content {
+    padding: 10px;
+}
+
+.ui.list .item .content .header {
+    font-size: 14px;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    cursor: default !important;
+}
+
+
+/*.ui.list .item:hover {
+    background-color: #EEE;
+}*/

@@ -16,11 +16,16 @@
 References = new Mongo.Collection('references');
 
 Template.menu.onRendered(function () {
-    this.$(".menu").menu();
+    //this.$(".menu").menu();
+    $('.ui.menu').on('click', '.item', function () {
+        if (!$(this).hasClass('dropdown')) {
+            $(this).addClass('active').siblings('.item').removeClass('active');
+        }
+    });
 });
 Template.references.onRendered(function () {
-    this.$(".dropdown").dropdown();
-    this.$(".checkbox").checkbox();
+    this.$(".ui.dropdown").dropdown();
+    this.$(".ui.checkbox").checkbox();
 });
 
 Template.references.helpers({
@@ -32,11 +37,12 @@ Template.references.helpers({
 Template.references.events({
     'submit .frm-references': function (event) {
         var name = event.target.name.value;
+        var genre = event.target.country.value;
         References.insert({
             name: name
+            , genre: genre
             , createdAt: new Date()
         });
-        event.target.name.value = '';
         return false;
     }
     , 'click #delete-ref': function () {
@@ -74,7 +80,14 @@ Router.route('/references', function () {
 });
 
 $(document).ready(function () {
-    $(document).on('click', '#save-ref', function () {
-        $('.frm-references').submit();
+    $(document).on('click', '#discard-ref', function (event) {
+        $('input[name=name]').val('');
+        $('.ui.dropdown').dropdown('clear');
+    });
+    $(document).on('click', 'button', function (event) {
+        if ($(event.target).hasClass('no-submit')) {
+            event.preventDefault();
+            return false;
+        }
     });
 });
