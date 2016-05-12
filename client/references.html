@@ -1,24 +1,38 @@
 <template name="references">
-	<form class="frm-references" method="POST">
-		<input type="text" name="name" placeholder="Reference name" />
-        <textarea name="description" placeholder="Reference name"></textarea>
-        <select class="ui dropdown">
-            <option value="">Gender</option>
-            <option value="1">Male</option>
-            <option value="0">Female</option>
-        </select>
-        
-        
-        {{{btnDflt 'save-ref' 'btn bg-red' 'content-save' 'Save'}}}
-	</form>
-	<br /><br />Refs:
-	<table>
-		{{#each references}}
-		<tr>
-			<td>{{name}}</td>
-			<td>{{formatDate createdAt}}</td>
-			<td><i id="delete-ref" class="mdi mdi-close-circle ibtn-24 red"></i></td>
-		</tr>
-		{{/each}}
-	</table>
+    <form class="frm-references" method="POST">
+        <input type="text" name="name" placeholder="Reference name" />
+        <br />
+        <!--div class="ui checkbox">
+            <input type="checkbox" name="example">
+            <label>Make my profile visible</label>
+        </div-->
+        <div class="ui fluid selection dropdown">
+            <input type="hidden" name="user">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Friend</div>
+            <div class="menu">
+                <div class="item" data-value="jenny">
+                    <img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg"> 2d Platform
+                </div>
+                <div class="item" data-value="elliot">
+                    <img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg"> Elliot Fu
+                </div>
+            </div>
+        </div>
+        <br /> {{{btnDflt 'save-ref' 'btn bg-red' 'content-save' 'Save'}}}
+        <!--button id="save-ref" class="ui button bg-red">
+            <i class="save icon"></i> Save
+        </button-->
+    </form>
+    <br />
+    <br />Refs:
+    <table>
+        {{#each references}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{formatDate createdAt}}</td>
+            <td><i id="delete-ref" class="mdi mdi-close-circle ibtn-24 red"></i></td>
+        </tr>
+        {{/each}}
+    </table>
 </template>

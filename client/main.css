@@ -1,45 +1,58 @@
 /* CSS declarations go here */
-body{
-	font: 14px 'Roboto', sans-serif, Tahoma, Verdana, Arial !important;
+
+body {
+    font: 14px 'Roboto', sans-serif, Tahoma, Verdana, Arial !important;
 }
-.btn{
-	display: table;
-	height: 32px;
-	cursor: pointer;
-	padding: 0px 14px;	
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	color: #FFF;
+
+.btn {
+    display: table;
+    height: 32px;
+    cursor: pointer;
+    padding: 0px 14px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #FFF;
     margin: 2px 0px;
 }
-.btn .icon, .btn .text{
-	display: table-cell;
-	vertical-align: middle;
+
+.btn .icon,
+.btn .text {
+    display: table-cell;
+    vertical-align: middle;
 }
-.btn .icon{
-	font-size: 22px;
+
+.btn .icon {
+    font-size: 22px;
 }
-.btn .text{
-	font-size: 18px;
-	//font-weight: bold;
-	padding: 0px 6px;
+
+.btn .text {
+    font-size: 18px;
+    //font-weight: bold;
+    padding: 0px 6px;
 }
-.ibtn-24{
-	font-size: 24px;
-	cursor: pointer;
+
+.ibtn-24 {
+    font-size: 24px;
+    cursor: pointer;
 }
-.ibtn-36{
-	font-size: 36px;
-	cursor: pointer;
+
+.ibtn-36 {
+    font-size: 36px;
+    cursor: pointer;
 }
-.red{
-	color: #F44336;	
+
+.red {
+    color: #F44336;
 }
-.bg-red{
-	background-color: #F44336;	
+
+.bg-red {
+    background-color: #F44336 !important;
+    color: #FFF !important;
 }
-input[type=text], input[type=password]{
+
+input[type=text],
+input[type=password] {
     border: 0px;
     border-bottom: 2px #333 solid;
     outline: none;
