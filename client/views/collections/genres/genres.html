@@ -1,0 +1,58 @@
+<template name="genres">
+    <form class="frm-genres" method="POST">
+        <!--input type="text" name="name" placeholder="Reference name" /-->
+        <div class="ui corner labeled input">
+            <input type="text" name="name" placeholder="Genre name">
+            <div class="ui corner label">
+                <i class="asterisk icon"></i>
+            </div>
+        </div>
+        <!--div class="ui checkbox">
+            <input type="checkbox" name="example">
+            <label>Make my profile visible</label>
+        </div-->
+        <div class="ui fluid search selection dropdown">
+            <input type="hidden" name="country">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Country</div>
+            <div class="menu">
+                <div class="item" data-value="ye"><i class="ye flag"></i>Yemen</div>
+                <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+                <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+            </div>
+        </div>
+        <br />
+        <!--{{{btnDflt 'save-ref' 'btn bg-red' 'content-save' 'Save'}}}-->
+        <!--button id="save-ref" class="ui button bg-red">
+            <i class="save icon"></i> Save
+        </button-->
+        <button class="ui primary button">
+            Save
+        </button>
+        <button id="discard-ref" class="ui button no-submit">
+            Discard
+        </button>
+    </form>
+    <br />
+    <br />
+    <h2 class="ui header">
+        <i class="book icon"></i>
+        <div class="content">
+            Genres
+        </div>
+    </h2>
+    <div class="ui middle aligned divided list">
+        {{#each references}}
+        <div class="item">
+            <div class="right floated content">
+                <i id="delete-ref" class="mdi mdi-close-circle ibtn-24 red"></i>
+            </div>
+            <!--img class="ui avatar image" src="/images/avatar2/small/lena.png"-->
+            <div class="content">
+                <a class="header">{{name}}</a>
+                <div class="description">{{genre}}</div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</template>
